@@ -1,7 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Intercambios Mercantiles S.A </title>
+  <title> Intermercambios Mercantiles S.A</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header, nav, section {
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #2c5282;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    color: #1e3a5f;
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: #2c5282;
+  }
+
+  ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  ol {
+    margin-left: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #1e3a5f;
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+</style>
+  
 </head>
 <body>
   <h1> Intermercambios Mercantiles S.A </h1>
@@ -13,7 +122,7 @@
        <li><a href = "#propiedades"> Propiedades </a></li>
      </ul>
    </nav>
-  <section id = inicio >
+  <section id = "inicio" >
     <h2> Inicio </h2>
   <h3> <u> 5 tips para elegir tu nueva casa: </u></h3>
   <ol>
@@ -47,7 +156,7 @@
       </ul>
   </ol>
   </section>
-  <section id = sobre_nosotros>
+  <section id = "sobre_nosotros">
      <h2> Sobre nosotros </h2>
   <p> Todo comenzó hace más de 20 años, cuando dos mentes visionarias apostaron por el mercado inmobiliario en Paraguay con disciplina, constancia y enfoque en resultados.</p>
 
@@ -59,21 +168,21 @@
 
 <p>Más que administrar inmuebles, nos enfocamos en dar soluciones concretas a propietarios e inquilino</p>
 </section>
-  <section id = trabaja_con_nosotros >
+  <section id = "trabaja_con_nosotros" >
   <h2> Trabaja con nosotros </h2>
   <p> ¿Queres formar parte de nuestro equipo? </p>
   <form>
     <label type = nombre_completo for = nombre_completo > Nombre completo</label>
-    <input id = nombre_completo placeholder = "Victor Andrés Lesme Prieto">
+    <input type = "text" id = nombre_completo placeholder = "Victor Andrés Lesme Prieto">
     <br>
     <label type = mail for = correo > Correo electronico </label>
-    <input id = correo placeholder = "victorlesme@gmail.com"> 
+    <input type = "email" id = correo placeholder = "victorlesme@gmail.com"> 
     <br>
     <label type = file for = cv >Adjunte su CV</label>
     <input type = file id= cv> 
     <br>
     <label type = tel for = telefono> Celular </label>
-    <input id = telefono placeholder = "0981 123456">
+    <input type = "tel" id = telefono placeholder = "0981 123456">
     <br> 
     <label> Ciudad de residencia </label>  
     <select name="ciudad" required>
@@ -90,7 +199,7 @@
     <button type = submit> Enviar </button>
   </form>
 </section>
-  <section id = propiedades>
+  <section id = "propiedades">
     <h2> Propiedades </h2>
     <p> Ofrecemos una cartera diversa de propiedades seleccionadas estratégicamente para adaptarse a diferentes objetivos: vivienda, inversión o desarrollo comercial. </p> 
     <nav>
@@ -105,18 +214,32 @@
     </nav>
   </section>
   <section>
-    <h3 id = casas > Casas </h3>
-     <img src="casa_pariri01.jpg" alt="Casa"> 
-    <h3 id = departamentos > Departamentos </h3>
-    <h3 id = oficinas > Oficinas </h3>
-    <h3 id = locales_comerciales > Locales Comerciale </h3>
-    <h3 id = depositos > Depositos </h3>
-    <h3 id = terrenos > Terrenos </h3>
+    <h3 id = "casas" > Casas </h3>
+    <section>
+        <h4> Casa de 2 habitaciones en Asunción </h4>
+    <img src ="casa_pariri01.jpg" alt = casa_pariri_325>
+    <p>La casa cuenta con 2 habitaciones, baño social familiar, sala/comedor integrados, cocina con mobiliario, galeria , habitación de servicio con baño, lavadero techado, amplio patio trasero y cochera para 1 vehiculo.</p>
+    <ul>
+      <li> Precio: Gs. 4.000.000 </li>
+      <li> Garantia: Gs. 6.000.000 </li>
+      <li> Ubicación: <a href = "https://maps.app.goo.gl/LkvApPW8AizXMSzq5" target = "_blank"> Pariri n°325</a></li>
+    </ul>
+     </section>
+    <section>
+    <h4> Casa de 5 habitaciones en Asunción </h4>
+    <img alt = casa_valoisrivarola_848>
+    <p>La casa cuenta con 3 habitaciones (1 suite), baño social/familiar, sala/comedor integrados, cocina con mobiliario, galeria , 2 habitaciones de servicio con baño, lavadero techado, amplio patio interno y cochera para 3 vehiculos.</p>
+    <ul>
+      <li> Precio: Gs. 4.500.000 </li>
+      <li> Garantia: Gs. 6.750.000 </li>
+      <li> Ubicación: <a href = "https://maps.app.goo.gl/bT2TvBkG4S1j56jp7" target = "_blank"> Valois Rivarola n°848 </a></li>
+    </ul>
+     </section>
+    <h3 id = "departamentos" > Departamentos </h3>
+    <h3 id = "oficinas" > Oficinas </h3>
+    <h3 id = "locales_comerciales" > Locales Comerciale </h3>
+    <h3 id = "depositos" > Depositos </h3>
+    <h3 id = "terrenos" > Terrenos </h3>
   </section>
 </body>
-</html>
-
-    <script src="/script.js"></script>
-  </body>
-
 </html>
